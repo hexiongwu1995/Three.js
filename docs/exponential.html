@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="MathJax-config.js"></script>
+    <meta charset="utf-8" />
+    <title>MathBox - Complex Exponential</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/three@0.137.0/examples/js/controls/OrbitControls.js"></script>
@@ -16,15 +14,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathbox@latest/build/bundle/mathbox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dat.gui@latest/build/dat.gui.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mathbox@latest/build/mathbox.css" />
-    <title>Three.js教程</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 </head>
 
 <body>
-    <div id="title-display" style="text-align: center; font-size: 1.5rem; font-weight: 500; margin-bottom: 3rem;"></div>
-    <script>document.getElementById('title-display').textContent = document.title </script>
-
-    <div class="mathbox" style="width: 80%; height: 600px; margin: 0 auto;"></div>
-
     <script>
         var blue = 0x3090ff;
         var white = 0xffffff;
@@ -36,7 +29,6 @@
         gui.add(props, "projectionAngle").min(0).max(360).step(0.5);
 
         var mathbox = MathBox.mathBox({
-            element: document.querySelector('.mathbox'),
             plugins: ["core", "controls", "cursor"],
             controls: {
                 klass: THREE.OrbitControls,
